@@ -1,0 +1,12 @@
+server:
+  port: 8877
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://124.71.29.134:3306/myblog?serverTimezone=GMT%2B8&&characterEncoding=utf-8&useSSL=false
+    username: admin
+    password: 123456
+  redis:
+    host: 124.71.29.134
+    port: 6379
+    password: 123456

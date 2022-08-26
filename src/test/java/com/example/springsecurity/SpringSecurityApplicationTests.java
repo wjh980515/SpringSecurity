@@ -1,6 +1,7 @@
 package com.example.springsecurity;
 
 import com.example.springsecurity.domain.User;
+import com.example.springsecurity.mapper.MenuMapper;
 import com.example.springsecurity.mapper.UserMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,15 @@ class SpringSecurityApplicationTests {
 
 	@Autowired
 	private UserMapper userMapper;
+
+	@Autowired
+	private MenuMapper menuMapper;
+
+	@Test
+	public void testMenuMapper(){
+		List<String> list = menuMapper.selectPermsByUserId(2L);
+		System.out.println(list);
+	}
 
 	@Test
 	void BCryptPasswordEncoderTest() {

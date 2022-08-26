@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     @RequestMapping("/test")
-    @PreAuthorize("hasAuthority('test')")
+    @PreAuthorize("hasAuthority('system:menu:all')")
     public String test(){
         return "test";
     }
